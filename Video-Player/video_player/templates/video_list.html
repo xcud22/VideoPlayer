@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play List</title>
+    <link rel="stylesheet" href="{% static 'css/video_list.css' %}">
+</head>
+<body>
+    <button id="playButton">Play Playlist</button>
+    <div id="videoContainer" data-videourls="{% for video in object_list %}{{ video.video_file.url }}{% if not forloop.last %},{% endif %}{% endfor %}">
+        <video id="videoPlayer" controls></video>
+    </div>
+    <script src="{% static 'js/video_list.js' %}"></script>
+</body>
+</html>
