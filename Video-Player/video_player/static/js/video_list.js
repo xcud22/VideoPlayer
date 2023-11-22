@@ -1,5 +1,6 @@
 let videoContainer=document.getElementById('videoContainer');
 let videoUrls=videoContainer.getAttribute('data-videourls').split(',');
+console.log(videoUrls);
 let videoPlayer=document.getElementById('videoPlayer');
 let playButton=document.getElementById('playButton');
 let currentVideoIndex=0;
